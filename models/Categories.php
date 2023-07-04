@@ -1,9 +1,11 @@
 <?php
 
+require_once "Trait.php";
+
 class Category {
+    use CommonTrait;
 
     private $icon;
-    private $name;
 
     public function __construct($icon, $name) {
 
@@ -18,13 +20,5 @@ class Category {
     public function setIcon($icon) {
 
         $this -> icon = $icon;
-    }
-    public function getName() {
-
-        return $this -> name;
-    }
-    public function setName($name) {
-
-        $this -> name = $name;
     }
 }

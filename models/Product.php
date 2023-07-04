@@ -1,8 +1,10 @@
 <?php
 
-class Product {
+require_once "Trait.php";
 
-    private $name;
+class Product {
+    use CommonTrait;
+
     private $weight;
     private $price;
 
@@ -12,19 +14,10 @@ class Product {
 
         $this -> setName($name);
         $this -> setWeight($weight);
-        $this -> setPrice($price);     
-        
+        $this -> setPrice($price);        
         $this -> setCategory($category);
     }
 
-    public function getName() {
-
-        return $this -> name;
-    }
-    public function setName($name) {
-
-        $this -> name = $name;
-    }
     public function getWeight() {
 
         return $this -> weight;
